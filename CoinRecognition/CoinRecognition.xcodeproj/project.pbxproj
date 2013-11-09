@@ -17,12 +17,14 @@
 		90662FEF182E993300227D27 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90662FEE182E993300227D27 /* Default@2x.png */; };
 		90662FF1182E993300227D27 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90662FF0182E993300227D27 /* Default-568h@2x.png */; };
 		90662FF4182E993300227D27 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90662FF2182E993300227D27 /* MainStoryboard.storyboard */; };
-		90662FF7182E993300227D27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90662FF6182E993300227D27 /* ViewController.m */; };
+		90662FF7182E993300227D27 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90662FF6182E993300227D27 /* ViewController.mm */; };
 		90662FFF182E993300227D27 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90662FFE182E993300227D27 /* SenTestingKit.framework */; };
 		90663000182E993300227D27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90662FDA182E993300227D27 /* UIKit.framework */; };
 		90663001182E993300227D27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90662FDC182E993300227D27 /* Foundation.framework */; };
 		90663009182E993300227D27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90663007182E993300227D27 /* InfoPlist.strings */; };
 		9066300C182E993300227D27 /* CoinRecognitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9066300B182E993300227D27 /* CoinRecognitionTests.m */; };
+		90663016182E9C7300227D27 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90663015182E9C7300227D27 /* opencv2.framework */; };
+		90663018182E9D2700227D27 /* overlook.png in Resources */ = {isa = PBXBuildFile; fileRef = 90663017182E9D2700227D27 /* overlook.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +53,15 @@
 		90662FF0182E993300227D27 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		90662FF3182E993300227D27 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		90662FF5182E993300227D27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		90662FF6182E993300227D27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90662FF6182E993300227D27 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		90662FFD182E993300227D27 /* CoinRecognitionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinRecognitionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90662FFE182E993300227D27 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		90663006182E993300227D27 /* CoinRecognitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinRecognitionTests-Info.plist"; sourceTree = "<group>"; };
 		90663008182E993300227D27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9066300A182E993300227D27 /* CoinRecognitionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoinRecognitionTests.h; sourceTree = "<group>"; };
 		9066300B182E993300227D27 /* CoinRecognitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinRecognitionTests.m; sourceTree = "<group>"; };
+		90663015182E9C7300227D27 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		90663017182E9D2700227D27 /* overlook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlook.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90663016182E9C7300227D27 /* opencv2.framework in Frameworks */,
 				90662FDB182E993300227D27 /* UIKit.framework in Frameworks */,
 				90662FDD182E993300227D27 /* Foundation.framework in Frameworks */,
 				90662FDF182E993300227D27 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +92,7 @@
 		90662FCE182E993300227D27 = {
 			isa = PBXGroup;
 			children = (
+				90663015182E9C7300227D27 /* opencv2.framework */,
 				90662FE0182E993300227D27 /* CoinRecognition */,
 				90663004182E993300227D27 /* CoinRecognitionTests */,
 				90662FD9182E993300227D27 /* Frameworks */,
@@ -121,7 +127,7 @@
 				90662FEA182E993300227D27 /* AppDelegate.m */,
 				90662FF2182E993300227D27 /* MainStoryboard.storyboard */,
 				90662FF5182E993300227D27 /* ViewController.h */,
-				90662FF6182E993300227D27 /* ViewController.m */,
+				90662FF6182E993300227D27 /* ViewController.mm */,
 				90662FE1182E993300227D27 /* Supporting Files */,
 			);
 			path = CoinRecognition;
@@ -154,6 +160,7 @@
 		90663005182E993300227D27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90663017182E9D2700227D27 /* overlook.png */,
 				90663006182E993300227D27 /* CoinRecognitionTests-Info.plist */,
 				90663007182E993300227D27 /* InfoPlist.strings */,
 			);
@@ -237,6 +244,7 @@
 				90662FEF182E993300227D27 /* Default@2x.png in Resources */,
 				90662FF1182E993300227D27 /* Default-568h@2x.png in Resources */,
 				90662FF4182E993300227D27 /* MainStoryboard.storyboard in Resources */,
+				90663018182E9D2700227D27 /* overlook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +294,7 @@
 			files = (
 				90662FE7182E993300227D27 /* main.m in Sources */,
 				90662FEB182E993300227D27 /* AppDelegate.m in Sources */,
-				90662FF7182E993300227D27 /* ViewController.m in Sources */,
+				90662FF7182E993300227D27 /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +405,10 @@
 		90663010182E993300227D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinRecognition/CoinRecognition-Prefix.pch";
 				INFOPLIST_FILE = "CoinRecognition/CoinRecognition-Info.plist";
@@ -409,6 +421,10 @@
 		90663011182E993300227D27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinRecognition/CoinRecognition-Prefix.pch";
 				INFOPLIST_FILE = "CoinRecognition/CoinRecognition-Info.plist";
