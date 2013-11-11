@@ -23,6 +23,11 @@ public:
     void drawCircles();
     void findCircles();
     void gaussianBlur();
+    void sobel();
+    void thresholdToZero(int thresh);
+    void threshold(int thresh);
+    void invert();
+    void findCountures();
     cv::Mat getChannel(int number);
     cv::Mat getImage() const;
     void setImage(cv::Mat image);

@@ -49,7 +49,6 @@ cv::Mat equalizeIntensity(const cv::Mat& inputImage)
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
     UIImage * testImage = [UIImage imageNamed:@"photo.jpg"];
 
     /*UIAlertView * alert = [[UIAlertView alloc]
@@ -63,12 +62,21 @@ cv::Mat equalizeIntensity(const cv::Mat& inputImage)
     [self showImage:testImage];
     
     ImageAnalyzer coinFinder([self cvMatFromUIImage:testImage]);
-    coinFinder.applyCvtColor(CV_BGR2GRAY);
+    coinFinder.applyCvtColor(CV_BGR2HSV_FULL);
+    coinFinder.setImage(coinFinder.getChannel(2));
+    //coinFinder.setImage(equalizeIntensity(coinFinder.getImage()));
+    coinFinder.sobel();//coinFinder.sobel();
+                       //coinFinder.thresholdToZero(100);
     coinFinder.gaussianBlur();
 
-    //coinFinder.setImage(coinFinder.getChannel(2));
-    coinFinder.findCircles();
-    coinFinder.drawCircles();
+    // TODO: add cvMask so added sobel is black
+    //coinFinder.sobel();
+    //coinFinder.threshold(80);
+    //coinFinder.invert();
+
+
+    //
+    coinFinder.findCircles(); coinFinder.drawCircles();
     [self showCvImage:coinFinder.getImage()];
 }
 
