@@ -22,6 +22,7 @@ public:
     void applyCvtColor(int filerCode);
     void drawCircles();
     void findCircles();
+    void gaussianBlur();
     cv::Mat getChannel(int number);
     cv::Mat getImage() const;
     void setImage(cv::Mat image);

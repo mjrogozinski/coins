@@ -31,7 +31,7 @@ void ImageAnalyzer::drawCircles()
 
 void ImageAnalyzer::findCircles()
 {
-    cv::HoughCircles(image_, circles_, CV_HOUGH_GRADIENT, 1, 100, 100, 100, 50);
+    cv::HoughCircles(image_, circles_, CV_HOUGH_GRADIENT, 1, 8);
 }
 
 cv::Mat ImageAnalyzer::getChannel(int number)
@@ -56,4 +56,13 @@ void ImageAnalyzer::applyCvtColor(int filerCode)
 cv::Mat ImageAnalyzer::getImage() const
 {
     return image_;
+}
+
+void ImageAnalyzer::gaussianBlur()
+{
+    cv::GaussianBlur(image_,
+                     image_,
+                     cv::Size(9, 9),
+                     2,
+                     2);
 }

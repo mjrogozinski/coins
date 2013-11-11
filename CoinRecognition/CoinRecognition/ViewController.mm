@@ -63,11 +63,12 @@ cv::Mat equalizeIntensity(const cv::Mat& inputImage)
     [self showImage:testImage];
     
     ImageAnalyzer coinFinder([self cvMatFromUIImage:testImage]);
-    coinFinder.applyCvtColor(CV_BGR2HSV_FULL);
-    coinFinder.setImage(coinFinder.getChannel(2));
+    coinFinder.applyCvtColor(CV_BGR2GRAY);
+    coinFinder.gaussianBlur();
+
+    //coinFinder.setImage(coinFinder.getChannel(2));
     coinFinder.findCircles();
     coinFinder.drawCircles();
-
     [self showCvImage:coinFinder.getImage()];
 }
 
