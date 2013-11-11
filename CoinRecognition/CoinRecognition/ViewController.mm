@@ -8,36 +8,79 @@
 
 #import "ViewController.h"
 #include <opencv2/opencv.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include "ImageAnalyzer.h"
 
 @interface ViewController ()
 
 @end
 
+cv::Mat equalizeIntensity(const cv::Mat& inputImage)
+{
+    if(inputImage.channels() >= 3)
+    {
+        cv::Mat rgb;
+
+        cvtColor(inputImage, rgb, CV_BGR2RGB);
+
+        std::vector<cv::Mat> channels;
+        cv::split(rgb, channels);
+
+        for (int i = 0; i < 3; ++i)
+        {
+            equalizeHist(channels[i], channels[i]);
+        }
+
+        cv::Mat result;
+        cv::merge(channels, rgb);
+
+        cvtColor(rgb,result,CV_RGB2BGR);
+
+        return result;
+    }
+    return cv::Mat();
+}
+
 @implementation ViewController
+
+@synthesize mainImage;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    UIImage * testImage = [UIImage imageNamed:@"overlook.png"];
+    UIImage * testImage = [UIImage imageNamed:@"photo.jpg"];
 
-    UIAlertView * alert = [[UIAlertView alloc]
+    /*UIAlertView * alert = [[UIAlertView alloc]
                            initWithTitle:@"Hello!"
                            message:@"Welcome to Open"
                            delegate:self
                            cancelButtonTitle:@"Continue"
                            otherButtonTitles:nil];
-    [alert show];
+    [alert show];*/
 
-    cv::Mat matImage = [self cvMatFromUIImage:testImage];
-    cv::Mat greyImage;
-    cv::cvtColor(matImage, greyImage, CV_BGR2HSV_FULL);
+    [self showImage:testImage];
+    
+    ImageAnalyzer coinFinder([self cvMatFromUIImage:testImage]);
+    coinFinder.applyCvtColor(CV_BGR2HSV_FULL);
+    coinFinder.setImage(coinFinder.getChannel(2));
+    coinFinder.findCircles();
+    coinFinder.drawCircles();
 
-    UIImage * greyUIImage = [self UIImageFromCVMat:greyImage];
+    [self showCvImage:coinFinder.getImage()];
+}
 
-    self.view.backgroundColor = [UIColor colorWithPatternImage:greyUIImage];
 
+
+- (void)showImage:(UIImage *)image
+{
+    [self.mainImage setImage:image];
+}
+
+- (void)showCvImage:(cv::Mat)image
+{
+    [self showImage:[self UIImageFromCVMat:image]];
 }
 
 - (void)didReceiveMemoryWarning
