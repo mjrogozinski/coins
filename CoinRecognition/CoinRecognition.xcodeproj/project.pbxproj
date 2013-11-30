@@ -37,7 +37,7 @@
 		90B637F3184A479A0009E56A /* 10gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EA184A479A0009E56A /* 10gr.PNG */; };
 		90B637F4184A479A0009E56A /* 20gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EB184A479A0009E56A /* 20gr.PNG */; };
 		90B637F5184A479A0009E56A /* 50gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EC184A479A0009E56A /* 50gr.PNG */; };
-		90B637F9184A50430009E56A /* OpenCvHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B637F8184A50430009E56A /* OpenCvHelper.m */; };
+		90B637F9184A50430009E56A /* OpenCvHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90B637F8184A50430009E56A /* OpenCvHelper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +89,7 @@
 		90B637EC184A479A0009E56A /* 50gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 50gr.PNG; sourceTree = "<group>"; };
 		90B637F6184A4EA00009E56A /* OpenCvHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCvHelperFunctions.h; sourceTree = "<group>"; };
 		90B637F7184A50430009E56A /* OpenCvHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCvHelper.h; path = ../OpenCvHelper.h; sourceTree = "<group>"; };
-		90B637F8184A50430009E56A /* OpenCvHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenCvHelper.m; path = ../OpenCvHelper.m; sourceTree = "<group>"; };
+		90B637F8184A50430009E56A /* OpenCvHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCvHelper.mm; path = ../OpenCvHelper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				90B637F7184A50430009E56A /* OpenCvHelper.h */,
-				90B637F8184A50430009E56A /* OpenCvHelper.m */,
+				90B637F8184A50430009E56A /* OpenCvHelper.mm */,
 				90662FE9182E993300227D27 /* AppDelegate.h */,
 				90662FEA182E993300227D27 /* AppDelegate.m */,
 				90662FF2182E993300227D27 /* MainStoryboard.storyboard */,
@@ -358,7 +358,7 @@
 				90662FEB182E993300227D27 /* AppDelegate.m in Sources */,
 				90662FF7182E993300227D27 /* ViewController.mm in Sources */,
 				9008999F1830F043000F3E3B /* ImageAnalyzer.cpp in Sources */,
-				90B637F9184A50430009E56A /* OpenCvHelper.m in Sources */,
+				90B637F9184A50430009E56A /* OpenCvHelper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include "ImageAnalyzer.h"
 #include "OpenCvHelperFunctions.h"
+#import "OpenCvHelper.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,7 @@
 
     [self showImage:testImage];
 
-    ImageAnalyzer coinFinder(helpers::cvMatFromUIImage:testImage);
+    ImageAnalyzer coinFinder([OpenCvHelper cvMatFromUIImage:testImage]);
     [self showCvImage:coinFinder.getImage()];
 }
 
@@ -39,13 +40,12 @@
 
 - (void)showCvImage:(cv::Mat)image
 {
-    [self showImage:[self UIImageFromCVMat:image]];
+    [self showImage:[OpenCvHelper UIImageFromCVMat:image]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
