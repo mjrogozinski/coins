@@ -12,6 +12,7 @@
 #include "ImageAnalyzer.h"
 #include "OpenCvHelperFunctions.h"
 #import "OpenCvHelper.h"
+#include "CoinMatcher.h"
 
 @interface ViewController ()
 
@@ -25,12 +26,16 @@
 {
     [super viewDidLoad];
 
-    UIImage * testImage = [UIImage imageNamed:@"photo2.jpg"];
+    cv::Mat zlTemplate = [OpenCvHelper cvMatFromUIImage:[UIImage imageNamed:@"5gr.PNG"]];
+    cv::cvtColor(zlTemplate, zlTemplate, CV_BGR2GRAY);
+    CoinMatcher fiveZlMatcher(zlTemplate, "5zl Matcher");
+    
+    cv::Mat scene = [OpenCvHelper cvMatFromUIImage:[UIImage imageNamed:@"photo.jpg"]];
+    cv::cvtColor(scene, scene, CV_BGR2GRAY);
+    fiveZlMatcher.find(scene);
+    fiveZlMatcher.draw(scene);
 
-    [self showImage:testImage];
-
-    ImageAnalyzer coinFinder([OpenCvHelper cvMatFromUIImage:testImage]);
-    [self showCvImage:coinFinder.getImage()];
+    [self showCvImage:scene];
 }
 
 - (void)showImage:(UIImage *)image
