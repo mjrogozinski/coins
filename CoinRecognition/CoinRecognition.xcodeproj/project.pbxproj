@@ -38,6 +38,7 @@
 		90B637F4184A479A0009E56A /* 20gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EB184A479A0009E56A /* 20gr.PNG */; };
 		90B637F5184A479A0009E56A /* 50gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EC184A479A0009E56A /* 50gr.PNG */; };
 		90B637F9184A50430009E56A /* OpenCvHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90B637F8184A50430009E56A /* OpenCvHelper.mm */; };
+		90B637FC184A55D10009E56A /* CoinMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90B637FA184A55D10009E56A /* CoinMatcher.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		90B637F6184A4EA00009E56A /* OpenCvHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCvHelperFunctions.h; sourceTree = "<group>"; };
 		90B637F7184A50430009E56A /* OpenCvHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCvHelper.h; path = ../OpenCvHelper.h; sourceTree = "<group>"; };
 		90B637F8184A50430009E56A /* OpenCvHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCvHelper.mm; path = ../OpenCvHelper.mm; sourceTree = "<group>"; };
+		90B637FA184A55D10009E56A /* CoinMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoinMatcher.cpp; sourceTree = "<group>"; };
+		90B637FB184A55D10009E56A /* CoinMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinMatcher.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				9008999D1830F043000F3E3B /* ImageAnalyzer.cpp */,
 				9008999E1830F043000F3E3B /* ImageAnalyzer.h */,
 				90B637F6184A4EA00009E56A /* OpenCvHelperFunctions.h */,
+				90B637FA184A55D10009E56A /* CoinMatcher.cpp */,
+				90B637FB184A55D10009E56A /* CoinMatcher.h */,
 			);
 			path = CoinRecognition;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				90662FF7182E993300227D27 /* ViewController.mm in Sources */,
 				9008999F1830F043000F3E3B /* ImageAnalyzer.cpp in Sources */,
 				90B637F9184A50430009E56A /* OpenCvHelper.mm in Sources */,
+				90B637FC184A55D10009E56A /* CoinMatcher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

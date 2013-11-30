@@ -7,3 +7,74 @@
 //
 
 #include "CoinMatcher.h"
+
+CoinMatcher::CoinMatcher(const cv::Mat& object, const std::string& name)
+    : detector_(400)
+    , name_(name)
+    , maxDistMatch_(0)
+    , minDistMatch_(100)
+{
+    template_ = object;
+}
+
+void CoinMatcher::find(const cv::Mat& scene)
+{
+    detectTemplateKeyPoints();
+    detectSceneKeyPoints(scene);
+    findGoodMatches();
+}
+
+void CoinMatcher::detectTemplateKeyPoints()
+{
+    templateKeyPoints_.clear();
+    detector_.detect(template_, templateKeyPoints_);
+    extractor_.compute(template_, templateKeyPoints_, templateDescriptors_);
+}
+
+void CoinMatcher::detectSceneKeyPoints(const cv::Mat& scene)
+{
+    sceneKeyPoints_.clear();
+    detector_.detect(scene, sceneKeyPoints_);
+    extractor_.compute(scene, sceneKeyPoints_, sceneDescriptors_);
+}
+
+void CoinMatcher::match()
+{
+    matcher_.match(templateDescriptors_, sceneDescriptors_, matches_);
+}
+
+void CoinMatcher::findDistances()
+{
+    for( int i = 0; i < templateDescriptors_.rows; i++ )
+    {
+        double dist = matches_[i].distance;
+        if( dist < minDistMatch_ ) minDistMatch_ = dist;
+        if( dist > maxDistMatch_ ) maxDistMatch_ = dist;
+    }
+    printf("-- Max dist : %f \n", maxDistMatch_ );
+    printf("-- Min dist : %f \n", minDistMatch_ );
+}
+
+void CoinMatcher::findGoodMatches()
+{
+    match();
+    findDistances();
+    for( int i = 0; i < templateDescriptors_.rows; i++ )
+    {
+        if( matches_[i].distance < 2*minDistMatch_ )
+        {
+            goodMaches_.push_back( matches_[i]);
+            
+        }
+    }
+    printf("-- GoodMatches Count : %li \n", goodMaches_.size() );
+}
+
+void CoinMatcher::draw(cv::Mat& scene)
+{
+    cv::Mat img_matches;
+    drawMatches( template_, templateKeyPoints_, scene, sceneKeyPoints_,
+                goodMaches_, img_matches, cv::Scalar::all(-1), cv::Scalar::all(-1),
+                std::vector<char>(), cv::DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
+    scene = img_matches;
+}
