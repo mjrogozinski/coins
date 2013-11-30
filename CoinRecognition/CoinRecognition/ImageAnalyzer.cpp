@@ -73,19 +73,14 @@ void ImageAnalyzer::gaussianBlur()
 
 void ImageAnalyzer::sobel()
 {
-    //std::vector<cv::Mat> sobels;
-    //sobels.push_back(image_);
-    //sobels.push_back(image_);
     cv::Mat afterSobel;
     cv::Sobel(image_, afterSobel, -1, 0, 1);
     cv::Sobel(image_, afterSobel, -1, 1, 0);
     ImageAnalyzer sobelHelper(afterSobel);
-    sobelHelper.thresholdToZero(90);
-    cv::add(sobelHelper.getImage(), image_, image_);
-    //cv::Sobel(image_, sobels[1], -1, 1, 1);
-    //cv::merge(sobels, image_);
-
-    //cv::equalizeHist(image_, image_);
+    sobelHelper.thresholdToZero(70);
+    //sobelHelper.threshold(50);
+    image_ = afterSobel;
+    //cv::add(sobelHelper.getImage(), image_, image_);
 }
 
 void ImageAnalyzer::thresholdToZero(int thresh)
@@ -103,10 +98,25 @@ void ImageAnalyzer::invert()
     
 }
 
-void ImageAnalyzer::findCountures()
+void ImageAnalyzer::findContours()
 {
-    //cv::findContours(image_, )
-    
+    std::vector<std::vector<cv::Point> > contours;
+    std::vector<cv::Vec4i> hierarchy;
+    cv::findContours(image_, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE);
+    contours_ = contours;
+    hierarchy_ = hierarchy;
+}
+
+void ImageAnalyzer::drawContours()
+{
+    std::cout << contours_.size();
+    int firstContour = hierarchy_[0][0];
+    for (int i = firstContour; i >= 0; i = hierarchy_[i][0])
+    {
+        cv::Scalar color( rand()&255, rand()&255, rand()&255 );
+        cv::drawContours(image_, contours_, i, color, CV_FILLED, 8, hierarchy_);
+
+    }
 }
 
 void ImageAnalyzer::threshold(int thresh)

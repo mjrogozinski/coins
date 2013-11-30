@@ -25,10 +25,19 @@
 		90663009182E993300227D27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90663007182E993300227D27 /* InfoPlist.strings */; };
 		9066300C182E993300227D27 /* CoinRecognitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9066300B182E993300227D27 /* CoinRecognitionTests.m */; };
 		90663016182E9C7300227D27 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90663015182E9C7300227D27 /* opencv2.framework */; };
-		90663018182E9D2700227D27 /* overlook.png in Resources */ = {isa = PBXBuildFile; fileRef = 90663017182E9D2700227D27 /* overlook.png */; };
 		9066301A182EA1B500227D27 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90663019182EA1B500227D27 /* photo.jpg */; };
 		9066301C182EC66400227D27 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9066301B182EC66400227D27 /* photo2.jpg */; };
 		9066301D182EC66400227D27 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9066301B182EC66400227D27 /* photo2.jpg */; };
+		90B637ED184A479A0009E56A /* 1gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E4184A479A0009E56A /* 1gr.PNG */; };
+		90B637EE184A479A0009E56A /* 1zl.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E5184A479A0009E56A /* 1zl.PNG */; };
+		90B637EF184A479A0009E56A /* 2gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E6184A479A0009E56A /* 2gr.PNG */; };
+		90B637F0184A479A0009E56A /* 2zl.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E7184A479A0009E56A /* 2zl.PNG */; };
+		90B637F1184A479A0009E56A /* 5gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E8184A479A0009E56A /* 5gr.PNG */; };
+		90B637F2184A479A0009E56A /* 5zl.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E9184A479A0009E56A /* 5zl.PNG */; };
+		90B637F3184A479A0009E56A /* 10gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EA184A479A0009E56A /* 10gr.PNG */; };
+		90B637F4184A479A0009E56A /* 20gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EB184A479A0009E56A /* 20gr.PNG */; };
+		90B637F5184A479A0009E56A /* 50gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EC184A479A0009E56A /* 50gr.PNG */; };
+		90B637F9184A50430009E56A /* OpenCvHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B637F8184A50430009E56A /* OpenCvHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +76,20 @@
 		9066300A182E993300227D27 /* CoinRecognitionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoinRecognitionTests.h; sourceTree = "<group>"; };
 		9066300B182E993300227D27 /* CoinRecognitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinRecognitionTests.m; sourceTree = "<group>"; };
 		90663015182E9C7300227D27 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		90663017182E9D2700227D27 /* overlook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlook.png; sourceTree = "<group>"; };
-		90663019182EA1B500227D27 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpg; sourceTree = "<group>"; };
-		9066301B182EC66400227D27 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo2.jpg; sourceTree = "<group>"; };
+		90663019182EA1B500227D27 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.jpg; path = CoinRecognitionTests/photo.jpg; sourceTree = SOURCE_ROOT; };
+		9066301B182EC66400227D27 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = CoinRecognitionTests/photo2.jpg; sourceTree = SOURCE_ROOT; };
+		90B637E4184A479A0009E56A /* 1gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1gr.PNG; sourceTree = "<group>"; };
+		90B637E5184A479A0009E56A /* 1zl.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1zl.PNG; sourceTree = "<group>"; };
+		90B637E6184A479A0009E56A /* 2gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2gr.PNG; sourceTree = "<group>"; };
+		90B637E7184A479A0009E56A /* 2zl.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2zl.PNG; sourceTree = "<group>"; };
+		90B637E8184A479A0009E56A /* 5gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5gr.PNG; sourceTree = "<group>"; };
+		90B637E9184A479A0009E56A /* 5zl.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5zl.PNG; sourceTree = "<group>"; };
+		90B637EA184A479A0009E56A /* 10gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10gr.PNG; sourceTree = "<group>"; };
+		90B637EB184A479A0009E56A /* 20gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20gr.PNG; sourceTree = "<group>"; };
+		90B637EC184A479A0009E56A /* 50gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 50gr.PNG; sourceTree = "<group>"; };
+		90B637F6184A4EA00009E56A /* OpenCvHelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCvHelperFunctions.h; sourceTree = "<group>"; };
+		90B637F7184A50430009E56A /* OpenCvHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenCvHelper.h; path = ../OpenCvHelper.h; sourceTree = "<group>"; };
+		90B637F8184A50430009E56A /* OpenCvHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenCvHelper.m; path = ../OpenCvHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +151,8 @@
 		90662FE0182E993300227D27 /* CoinRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				90B637F7184A50430009E56A /* OpenCvHelper.h */,
+				90B637F8184A50430009E56A /* OpenCvHelper.m */,
 				90662FE9182E993300227D27 /* AppDelegate.h */,
 				90662FEA182E993300227D27 /* AppDelegate.m */,
 				90662FF2182E993300227D27 /* MainStoryboard.storyboard */,
@@ -139,6 +161,7 @@
 				90662FE1182E993300227D27 /* Supporting Files */,
 				9008999D1830F043000F3E3B /* ImageAnalyzer.cpp */,
 				9008999E1830F043000F3E3B /* ImageAnalyzer.h */,
+				90B637F6184A4EA00009E56A /* OpenCvHelperFunctions.h */,
 			);
 			path = CoinRecognition;
 			sourceTree = "<group>";
@@ -146,6 +169,9 @@
 		90662FE1182E993300227D27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90B637E3184A47750009E56A /* coinTemplates */,
+				9066301B182EC66400227D27 /* photo2.jpg */,
+				90663019182EA1B500227D27 /* photo.jpg */,
 				90662FE2182E993300227D27 /* CoinRecognition-Info.plist */,
 				90662FE3182E993300227D27 /* InfoPlist.strings */,
 				90662FE6182E993300227D27 /* main.m */,
@@ -170,13 +196,26 @@
 		90663005182E993300227D27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9066301B182EC66400227D27 /* photo2.jpg */,
-				90663019182EA1B500227D27 /* photo.jpg */,
-				90663017182E9D2700227D27 /* overlook.png */,
 				90663006182E993300227D27 /* CoinRecognitionTests-Info.plist */,
 				90663007182E993300227D27 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90B637E3184A47750009E56A /* coinTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				90B637E4184A479A0009E56A /* 1gr.PNG */,
+				90B637E5184A479A0009E56A /* 1zl.PNG */,
+				90B637E6184A479A0009E56A /* 2gr.PNG */,
+				90B637E7184A479A0009E56A /* 2zl.PNG */,
+				90B637E8184A479A0009E56A /* 5gr.PNG */,
+				90B637E9184A479A0009E56A /* 5zl.PNG */,
+				90B637EA184A479A0009E56A /* 10gr.PNG */,
+				90B637EB184A479A0009E56A /* 20gr.PNG */,
+				90B637EC184A479A0009E56A /* 50gr.PNG */,
+			);
+			name = coinTemplates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,9 +295,17 @@
 				90662FEF182E993300227D27 /* Default@2x.png in Resources */,
 				90662FF1182E993300227D27 /* Default-568h@2x.png in Resources */,
 				90662FF4182E993300227D27 /* MainStoryboard.storyboard in Resources */,
-				90663018182E9D2700227D27 /* overlook.png in Resources */,
 				9066301A182EA1B500227D27 /* photo.jpg in Resources */,
 				9066301C182EC66400227D27 /* photo2.jpg in Resources */,
+				90B637ED184A479A0009E56A /* 1gr.PNG in Resources */,
+				90B637EE184A479A0009E56A /* 1zl.PNG in Resources */,
+				90B637EF184A479A0009E56A /* 2gr.PNG in Resources */,
+				90B637F0184A479A0009E56A /* 2zl.PNG in Resources */,
+				90B637F1184A479A0009E56A /* 5gr.PNG in Resources */,
+				90B637F2184A479A0009E56A /* 5zl.PNG in Resources */,
+				90B637F3184A479A0009E56A /* 10gr.PNG in Resources */,
+				90B637F4184A479A0009E56A /* 20gr.PNG in Resources */,
+				90B637F5184A479A0009E56A /* 50gr.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +358,7 @@
 				90662FEB182E993300227D27 /* AppDelegate.m in Sources */,
 				90662FF7182E993300227D27 /* ViewController.mm in Sources */,
 				9008999F1830F043000F3E3B /* ImageAnalyzer.cpp in Sources */,
+				90B637F9184A50430009E56A /* OpenCvHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

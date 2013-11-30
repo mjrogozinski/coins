@@ -27,13 +27,16 @@ public:
     void thresholdToZero(int thresh);
     void threshold(int thresh);
     void invert();
-    void findCountures();
+    void findContours();
+    void drawContours();
     cv::Mat getChannel(int number);
     cv::Mat getImage() const;
     void setImage(cv::Mat image);
 
 private:
     std::vector<cv::Vec3f> circles_;
+    std::vector<std::vector<cv::Point> > contours_;
+    std::vector<cv::Vec4i> hierarchy_;
     cv::Mat image_;
 };
 
