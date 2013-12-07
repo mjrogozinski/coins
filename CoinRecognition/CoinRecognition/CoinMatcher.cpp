@@ -76,9 +76,15 @@ void CoinMatcher::findGoodMatches()
 
 void CoinMatcher::draw(cv::Mat& scene)
 {
+    printf("-- drawing %s\n", name_.c_str());
     cv::Mat img_matches;
     drawMatches( template_, templateKeyPoints_, scene, sceneKeyPoints_,
                 goodMaches_, img_matches, cv::Scalar::all(-1), cv::Scalar::all(-1),
                 std::vector<char>(), cv::DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
     scene = img_matches;
+}
+
+int CoinMatcher::goodMatches() const
+{
+    return goodMaches_.size();
 }

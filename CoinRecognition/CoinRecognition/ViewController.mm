@@ -8,6 +8,8 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <boost/bind.hpp>
+#include <algorithm>
+#include <functional>
 #import "ViewController.h"
 #include "ImageAnalyzer.h"
 #include "OpenCvHelperFunctions.h"
@@ -27,12 +29,15 @@
 {
     [super viewDidLoad];
 
-    cv::Mat scene = [OpenCvHelper cvMatFromUIImage:[UIImage imageNamed:@"photo 1.JPG"]];
+    cv::Mat scene = [OpenCvHelper cvMatFromUIImage:[UIImage imageNamed:@"photo 3.JPG"]];
     cv::cvtColor(scene, scene, CV_BGR2GRAY);
     
     std::vector<CoinMatcher> coinMatchers = [self getMatchers];
 
     std::for_each(coinMatchers.begin(), coinMatchers.end(), boost::bind(&CoinMatcher::find, _1, scene));
+
+    std::max_element(coinMatchers.begin(), coinMatchers.end(),
+                     boost::bind(&CoinMatcher::goodMatches, _2) > boost::bind(&CoinMatcher::goodMatches, _1))->draw(scene);
 
     [self showCvImage:scene];
 }

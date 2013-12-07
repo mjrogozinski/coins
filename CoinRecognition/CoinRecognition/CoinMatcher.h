@@ -25,6 +25,7 @@ public:
     CoinMatcher(const cv::Mat& object, const std::string& name);
     void find(const cv::Mat& scene);
     void draw(cv::Mat& scene);
+    int goodMatches() const;
 
 private:
     void detectTemplateKeyPoints();
