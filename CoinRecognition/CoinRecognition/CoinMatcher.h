@@ -40,8 +40,7 @@ private:
     cv::Mat sceneDescriptors_;
     KeyPoints templateKeyPoints_;
     KeyPoints sceneKeyPoints_;
-
-    cv::FlannBasedMatcher matcher_;
+    
     DMatches matches_;
     DMatches goodMaches_;
     double maxDistMatch_;

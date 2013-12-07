@@ -9,7 +9,7 @@
 #include "CoinMatcher.h"
 
 CoinMatcher::CoinMatcher(const cv::Mat& object, const std::string& name)
-    : detector_(400)
+    : detector_(1000)
     , name_(name)
     , maxDistMatch_(0)
     , minDistMatch_(100)
@@ -40,7 +40,8 @@ void CoinMatcher::detectSceneKeyPoints(const cv::Mat& scene)
 
 void CoinMatcher::match()
 {
-    matcher_.match(templateDescriptors_, sceneDescriptors_, matches_);
+    cv::FlannBasedMatcher matcher;
+    matcher.match(templateDescriptors_, sceneDescriptors_, matches_);
 }
 
 void CoinMatcher::findDistances()
@@ -51,6 +52,8 @@ void CoinMatcher::findDistances()
         if( dist < minDistMatch_ ) minDistMatch_ = dist;
         if( dist > maxDistMatch_ ) maxDistMatch_ = dist;
     }
+    printf("-- -- --\n");
+    printf("-- %s\n", name_.c_str());
     printf("-- Max dist : %f \n", maxDistMatch_ );
     printf("-- Min dist : %f \n", minDistMatch_ );
 }
@@ -68,6 +71,7 @@ void CoinMatcher::findGoodMatches()
         }
     }
     printf("-- GoodMatches Count : %li \n", goodMaches_.size() );
+    printf("-- -- --\n");
 }
 
 void CoinMatcher::draw(cv::Mat& scene)
