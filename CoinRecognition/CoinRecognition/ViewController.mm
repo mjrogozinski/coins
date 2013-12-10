@@ -24,6 +24,7 @@
 @implementation ViewController
 
 @synthesize mainImage;
+@synthesize photoAfterCalculations;
 
 - (void)viewDidLoad
 {
@@ -33,7 +34,9 @@
 -(void)recognizeCoin:(UIImage*)photo
 {
     NSLog(@"%s", __FUNCTION__);
-    cv::Mat scene = [OpenCvHelper cvMatFromUIImage:photo];//[UIImage imageNamed:@"photo 5gr.JPG"]];
+
+    [self showImage:photo];
+    cv::Mat scene = [OpenCvHelper cvMatFromUIImage:photo];
     ImageAnalyzer sceneAnalyzer(scene);
     sceneAnalyzer.applyCvtColor(CV_BGR2GRAY);
 
@@ -83,7 +86,20 @@
 
 - (void)showImage:(UIImage *)image
 {
-    [self.mainImage setImage:image];
+    NSLog(@"%s", __FUNCTION__);
+    if ([self mainImage] == nil)
+    {
+        self.photoAfterCalculations = image;
+    }
+    else
+    {
+        [self.mainImage setImage:image];
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self showImage:photoAfterCalculations];
 }
 
 - (void)showCvImage:(cv::Mat)image

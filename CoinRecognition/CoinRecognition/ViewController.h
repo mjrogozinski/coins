@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *mainImage;
 -(void)recognizeCoin:(UIImage*)photo;
+@property (strong, nonatomic) UIImage *photoAfterCalculations;
 
 @end
