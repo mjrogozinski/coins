@@ -8,7 +8,7 @@
 
 #include "ImageAnalyzer.h"
 
-ImageAnalyzer::ImageAnalyzer(const cv::Mat& image)
+ImageAnalyzer::ImageAnalyzer(cv::Mat& image)
 : image_(image)
 {}
 
@@ -76,11 +76,7 @@ void ImageAnalyzer::sobel()
     cv::Mat afterSobel;
     cv::Sobel(image_, afterSobel, -1, 0, 1);
     cv::Sobel(image_, afterSobel, -1, 1, 0);
-    ImageAnalyzer sobelHelper(afterSobel);
-    sobelHelper.thresholdToZero(70);
-    //sobelHelper.threshold(50);
     image_ = afterSobel;
-    //cv::add(sobelHelper.getImage(), image_, image_);
 }
 
 void ImageAnalyzer::thresholdToZero(int thresh)
@@ -122,4 +118,9 @@ void ImageAnalyzer::drawContours()
 void ImageAnalyzer::threshold(int thresh)
 {
     cv::threshold(image_, image_, thresh, 255, cv::THRESH_BINARY);
+}
+
+void ImageAnalyzer::erode()
+{
+    cv::erode(image_, image_, cv::Mat());
 }

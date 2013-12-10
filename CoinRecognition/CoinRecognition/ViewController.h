@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *mainImage;
+-(void)recognizeCoin:(UIImage*)photo;
 
 @end

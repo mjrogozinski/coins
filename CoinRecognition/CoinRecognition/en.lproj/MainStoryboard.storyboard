@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="wtZ-3J-yYN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nJ7-Pp-4fL">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="wtZ-3J-yYN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ag3-2E-NsL">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f5c-BP-Ed9" kind="relationship" relationship="rootViewController" id="sBL-1x-5zZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5S-7B-77Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="-99"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="4">
             <objects>
@@ -16,20 +31,99 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="5np-Dr-AhI"/>
-                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="Cdw-P4-4F8"/>
-                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="iGz-Yh-3h9"/>
-                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="qBB-Yz-pWF"/>
+                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="Eab-Kn-ixO"/>
+                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="QQf-6j-mH5"/>
+                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="hqg-6s-H38"/>
+                            <constraint firstItem="c5Q-BO-8KA" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="xrf-fa-i6W"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Pbo-6H-psO"/>
                     <connections>
-                        <outlet property="mainImage" destination="c5Q-BO-8KA" id="AwN-3n-aon"/>
+                        <outlet property="mainImage" destination="c5Q-BO-8KA" id="xrj-s5-IvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1027" y="-99"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="g3t-w9-p6B">
+            <objects>
+                <viewController id="f5c-BP-Ed9" customClass="CameraViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kaL-gt-IrI">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-yh-qmx"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rND-XJ-5Wg">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="f5c-BP-Ed9" eventType="touchUpInside" id="S2g-m2-lyh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAV-Go-4xj">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Analyze">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="analyzeImage:" destination="f5c-BP-Ed9" eventType="touchUpInside" id="W0I-VB-uDh"/>
+                                    <segue destination="2" kind="modal" id="uFM-1J-dZg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KAV-Go-4xj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="J1d-LC-dVb"/>
+                            <constraint firstItem="bbc-yh-qmx" firstAttribute="leading" secondItem="kaL-gt-IrI" secondAttribute="leading" type="default" id="ZPh-aU-ee8"/>
+                            <constraint firstAttribute="bottom" secondItem="rND-XJ-5Wg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="bDD-7d-YZN"/>
+                            <constraint firstAttribute="bottom" secondItem="KAV-Go-4xj" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="frm-Cd-Icb"/>
+                            <constraint firstItem="bbc-yh-qmx" firstAttribute="top" secondItem="kaL-gt-IrI" secondAttribute="top" type="default" id="g4k-Eg-dAD"/>
+                            <constraint firstItem="rND-XJ-5Wg" firstAttribute="leading" secondItem="kaL-gt-IrI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hF1-hK-qj3"/>
+                            <constraint firstItem="bbc-yh-qmx" firstAttribute="trailing" secondItem="kaL-gt-IrI" secondAttribute="trailing" type="default" id="hzf-lV-Ghs"/>
+                            <constraint firstItem="bbc-yh-qmx" firstAttribute="bottom" secondItem="kaL-gt-IrI" secondAttribute="bottom" type="default" id="ijc-EJ-B0W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ghs-JF-8gs"/>
+                    <connections>
+                        <outlet property="photo" destination="bbc-yh-qmx" id="TT5-8N-7wH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrR-6k-Xmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16" y="-99"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CameraViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="analyzeImage:" candidateClass="UIButton"/>
+                <relationship kind="action" name="takePhoto:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="photo" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

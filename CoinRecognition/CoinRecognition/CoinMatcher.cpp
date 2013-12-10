@@ -40,7 +40,7 @@ void CoinMatcher::detectSceneKeyPoints(const cv::Mat& scene)
 
 void CoinMatcher::match()
 {
-    cv::FlannBasedMatcher matcher;
+    cv::BFMatcher matcher;//(cv::NORM_HAMMING, true);
     matcher.match(templateDescriptors_, sceneDescriptors_, matches_);
 }
 
@@ -64,12 +64,11 @@ void CoinMatcher::findGoodMatches()
     findDistances();
     for( int i = 0; i < templateDescriptors_.rows; i++ )
     {
-        if( matches_[i].distance < 2*minDistMatch_ )
+        if( matches_[i].distance < 1.2*minDistMatch_ )
         {
-            goodMaches_.push_back( matches_[i]);
-            
+            goodMaches_.push_back(matches_[i]);            
         }
-    }
+    } // TODO: choose min avg distance from good matches.
     printf("-- GoodMatches Count : %li \n", goodMaches_.size() );
     printf("-- -- --\n");
 }

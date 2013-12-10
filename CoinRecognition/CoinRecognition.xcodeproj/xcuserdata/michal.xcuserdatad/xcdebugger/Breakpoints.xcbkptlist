@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoinRecognition/CoinMatcher.cpp"
-         timestampString = "407529836.105768"
+         timestampString = "408122352.692828"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
          landmarkName = "CoinMatcher::findGoodMatches()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CoinRecognition/CoinMatcher.cpp"
-         timestampString = "407529836.685537"
+         timestampString = "408122352.692828"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "60"
-         endingLineNumber = "60"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
          landmarkName = "CoinMatcher::findGoodMatches()"
          landmarkType = "5">
       </FileBreakpoint>

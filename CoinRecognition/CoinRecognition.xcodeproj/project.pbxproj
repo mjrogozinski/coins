@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9008999F1830F043000F3E3B /* ImageAnalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9008999D1830F043000F3E3B /* ImageAnalyzer.cpp */; };
+		900ABF1518535D1100970343 /* photo 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 900ABF1418535D1100970343 /* photo 1.JPG */; };
+		900ABF1718535D1700970343 /* photo 2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 900ABF1618535D1700970343 /* photo 2.JPG */; };
+		900ABF1918535D1C00970343 /* photo 3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 900ABF1818535D1C00970343 /* photo 3.JPG */; };
+		9037D46218566B4400958D3A /* 5grReal.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9037D46118566B4400958D3A /* 5grReal.PNG */; };
+		9037D46418566DA600958D3A /* photo 5gr.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9037D46318566DA600958D3A /* photo 5gr.JPG */; };
 		90662FDB182E993300227D27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90662FDA182E993300227D27 /* UIKit.framework */; };
 		90662FDD182E993300227D27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90662FDC182E993300227D27 /* Foundation.framework */; };
 		90662FDF182E993300227D27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90662FDE182E993300227D27 /* CoreGraphics.framework */; };
@@ -25,9 +30,6 @@
 		90663009182E993300227D27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90663007182E993300227D27 /* InfoPlist.strings */; };
 		9066300C182E993300227D27 /* CoinRecognitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9066300B182E993300227D27 /* CoinRecognitionTests.m */; };
 		90663016182E9C7300227D27 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90663015182E9C7300227D27 /* opencv2.framework */; };
-		9066301A182EA1B500227D27 /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90663019182EA1B500227D27 /* photo.jpg */; };
-		9066301C182EC66400227D27 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9066301B182EC66400227D27 /* photo2.jpg */; };
-		9066301D182EC66400227D27 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9066301B182EC66400227D27 /* photo2.jpg */; };
 		90B637ED184A479A0009E56A /* 1gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E4184A479A0009E56A /* 1gr.PNG */; };
 		90B637EE184A479A0009E56A /* 1zl.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E5184A479A0009E56A /* 1zl.PNG */; };
 		90B637EF184A479A0009E56A /* 2gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637E6184A479A0009E56A /* 2gr.PNG */; };
@@ -39,6 +41,7 @@
 		90B637F5184A479A0009E56A /* 50gr.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 90B637EC184A479A0009E56A /* 50gr.PNG */; };
 		90B637F9184A50430009E56A /* OpenCvHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90B637F8184A50430009E56A /* OpenCvHelper.mm */; };
 		90B637FC184A55D10009E56A /* CoinMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90B637FA184A55D10009E56A /* CoinMatcher.cpp */; };
+		90FC17BD1857681800AFEBDA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FC17BC1857681800AFEBDA /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,11 @@
 /* Begin PBXFileReference section */
 		9008999D1830F043000F3E3B /* ImageAnalyzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageAnalyzer.cpp; sourceTree = "<group>"; };
 		9008999E1830F043000F3E3B /* ImageAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAnalyzer.h; sourceTree = "<group>"; };
+		900ABF1418535D1100970343 /* photo 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo 1.JPG"; sourceTree = "<group>"; };
+		900ABF1618535D1700970343 /* photo 2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo 2.JPG"; sourceTree = "<group>"; };
+		900ABF1818535D1C00970343 /* photo 3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo 3.JPG"; sourceTree = "<group>"; };
+		9037D46118566B4400958D3A /* 5grReal.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5grReal.PNG; sourceTree = "<group>"; };
+		9037D46318566DA600958D3A /* photo 5gr.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo 5gr.JPG"; sourceTree = "<group>"; };
 		90662FD7182E993300227D27 /* CoinRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90662FDA182E993300227D27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		90662FDC182E993300227D27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,8 +85,6 @@
 		9066300A182E993300227D27 /* CoinRecognitionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoinRecognitionTests.h; sourceTree = "<group>"; };
 		9066300B182E993300227D27 /* CoinRecognitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinRecognitionTests.m; sourceTree = "<group>"; };
 		90663015182E9C7300227D27 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		90663019182EA1B500227D27 /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.jpg; path = CoinRecognitionTests/photo.jpg; sourceTree = SOURCE_ROOT; };
-		9066301B182EC66400227D27 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = CoinRecognitionTests/photo2.jpg; sourceTree = SOURCE_ROOT; };
 		90B637E4184A479A0009E56A /* 1gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1gr.PNG; sourceTree = "<group>"; };
 		90B637E5184A479A0009E56A /* 1zl.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1zl.PNG; sourceTree = "<group>"; };
 		90B637E6184A479A0009E56A /* 2gr.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2gr.PNG; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 		90B637F8184A50430009E56A /* OpenCvHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCvHelper.mm; path = ../OpenCvHelper.mm; sourceTree = "<group>"; };
 		90B637FA184A55D10009E56A /* CoinMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoinMatcher.cpp; sourceTree = "<group>"; };
 		90B637FB184A55D10009E56A /* CoinMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinMatcher.h; sourceTree = "<group>"; };
+		90FC17BB1857681800AFEBDA /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		90FC17BC1857681800AFEBDA /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		900ABF1318535C8300970343 /* testImages */ = {
+			isa = PBXGroup;
+			children = (
+				9037D46318566DA600958D3A /* photo 5gr.JPG */,
+				900ABF1418535D1100970343 /* photo 1.JPG */,
+				900ABF1618535D1700970343 /* photo 2.JPG */,
+				900ABF1818535D1C00970343 /* photo 3.JPG */,
+			);
+			name = testImages;
+			sourceTree = "<group>";
+		};
 		90662FCE182E993300227D27 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +180,8 @@
 				90662FF2182E993300227D27 /* MainStoryboard.storyboard */,
 				90662FF5182E993300227D27 /* ViewController.h */,
 				90662FF6182E993300227D27 /* ViewController.mm */,
+				90FC17BB1857681800AFEBDA /* CameraViewController.h */,
+				90FC17BC1857681800AFEBDA /* CameraViewController.m */,
 				90662FE1182E993300227D27 /* Supporting Files */,
 				9008999D1830F043000F3E3B /* ImageAnalyzer.cpp */,
 				9008999E1830F043000F3E3B /* ImageAnalyzer.h */,
@@ -174,9 +195,8 @@
 		90662FE1182E993300227D27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				900ABF1318535C8300970343 /* testImages */,
 				90B637E3184A47750009E56A /* coinTemplates */,
-				9066301B182EC66400227D27 /* photo2.jpg */,
-				90663019182EA1B500227D27 /* photo.jpg */,
 				90662FE2182E993300227D27 /* CoinRecognition-Info.plist */,
 				90662FE3182E993300227D27 /* InfoPlist.strings */,
 				90662FE6182E993300227D27 /* main.m */,
@@ -211,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				90B637E4184A479A0009E56A /* 1gr.PNG */,
+				9037D46118566B4400958D3A /* 5grReal.PNG */,
 				90B637E5184A479A0009E56A /* 1zl.PNG */,
 				90B637E6184A479A0009E56A /* 2gr.PNG */,
 				90B637E7184A479A0009E56A /* 2zl.PNG */,
@@ -300,8 +321,6 @@
 				90662FEF182E993300227D27 /* Default@2x.png in Resources */,
 				90662FF1182E993300227D27 /* Default-568h@2x.png in Resources */,
 				90662FF4182E993300227D27 /* MainStoryboard.storyboard in Resources */,
-				9066301A182EA1B500227D27 /* photo.jpg in Resources */,
-				9066301C182EC66400227D27 /* photo2.jpg in Resources */,
 				90B637ED184A479A0009E56A /* 1gr.PNG in Resources */,
 				90B637EE184A479A0009E56A /* 1zl.PNG in Resources */,
 				90B637EF184A479A0009E56A /* 2gr.PNG in Resources */,
@@ -311,6 +330,11 @@
 				90B637F3184A479A0009E56A /* 10gr.PNG in Resources */,
 				90B637F4184A479A0009E56A /* 20gr.PNG in Resources */,
 				90B637F5184A479A0009E56A /* 50gr.PNG in Resources */,
+				900ABF1518535D1100970343 /* photo 1.JPG in Resources */,
+				900ABF1718535D1700970343 /* photo 2.JPG in Resources */,
+				900ABF1918535D1C00970343 /* photo 3.JPG in Resources */,
+				9037D46218566B4400958D3A /* 5grReal.PNG in Resources */,
+				9037D46418566DA600958D3A /* photo 5gr.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				90663009182E993300227D27 /* InfoPlist.strings in Resources */,
-				9066301D182EC66400227D27 /* photo2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +388,7 @@
 				9008999F1830F043000F3E3B /* ImageAnalyzer.cpp in Sources */,
 				90B637F9184A50430009E56A /* OpenCvHelper.mm in Sources */,
 				90B637FC184A55D10009E56A /* CoinMatcher.cpp in Sources */,
+				90FC17BD1857681800AFEBDA /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +465,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -466,7 +490,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -481,8 +505,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinRecognition/CoinRecognition-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Users/michal/Developer/boost_1_55_0;
 				INFOPLIST_FILE = "CoinRecognition/CoinRecognition-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -497,8 +523,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoinRecognition/CoinRecognition-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Users/michal/Developer/boost_1_55_0;
 				INFOPLIST_FILE = "CoinRecognition/CoinRecognition-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

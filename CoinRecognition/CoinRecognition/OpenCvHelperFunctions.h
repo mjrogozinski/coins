@@ -26,7 +26,7 @@ cv::Mat equalizeIntensity(const cv::Mat& inputImage)
         std::vector<cv::Mat> channels;
         cv::split(rgb, channels);
 
-        for (int i = 0; i < 3; ++i)
+        for (int i = 0; i < channels.size(); ++i)
         {
             equalizeHist(channels[i], channels[i]);
         }
